@@ -1,16 +1,32 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Monstr</title>
-    <!-- <script src='js/index.js'></script> -->
-    <script src='js/demo.js'></script>
-  </head>
-  <body>
-    <h1>Monstr Inc.</h1>
-    <div id='create-monster'></div>
-    <div id='monster-container'></div>
-    <button id="back"><=</button>
-    <button id="forward">=></button>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monsters</title>
+  <style>
+    .monster-card { margin: 10px; padding: 10px; border: 1px solid #ccc; }
+    form { margin-bottom: 20px; }
+    button { margin: 10px; padding: 5px 10px; }
+  </style>
+</head>
+<body>
+  <h1>Monsters</h1>
+  <form id="monster-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" step="any" required>
+    <label for="description">Description:</label>
+    <input type="text" id="description" name="description" required>
+    <button type="submit">Create Monster</button>
+  </form>
+  <div id="monster-list"></div>
+  <button id="load-more">Load More Monsters</button>
+
+  <!-- Comment out demo.js -->
+  <!-- <script src="js/demo.js"></script> -->
+  <!-- Uncomment index.js -->
+  <script src="js/index.js"></script>
+</body>
 </html>
